@@ -18,7 +18,19 @@ public class FolderIterator {
 	private static SharedPreferences _sp;
 		
 	public FolderIterator() {
-		pathToSDCard = Environment.getExternalStorageDirectory();
+		File external_sd =new File("/mnt/external_sd/");
+		File extSdCard = new File("/mnt/extSdCard/");
+		File emmc = new File("/mnt/emmc/");
+		
+		if(external_sd.exists()) {
+			pathToSDCard = external_sd;
+		}else if (extSdCard.exists()){
+			pathToSDCard = extSdCard;
+		}else if (emmc.exists()){
+			pathToSDCard = emmc;
+		}else{
+			pathToSDCard = Environment.getExternalStorageDirectory();
+		}
 	}
 	
 	public static ArrayList<File> getFoldersOnSDCard() {
