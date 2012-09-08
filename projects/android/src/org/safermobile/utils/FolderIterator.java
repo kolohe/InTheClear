@@ -18,7 +18,7 @@ public class FolderIterator {
 	private static SharedPreferences _sp;
 		
 	public FolderIterator() {
-		File external_sd =new File("/mnt/external_sd/");
+		File external_sd =new File("/mnt/sdcard/external_sd/");
 		File extSdCard = new File("/mnt/extSdCard/");
 		File emmc = new File("/mnt/emmc/");
 		
