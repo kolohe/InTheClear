@@ -22,16 +22,18 @@ public class FolderIterator {
 		File extSdCard = new File("/mnt/extSdCard/");
 		File emmc = new File("/mnt/emmc/");
 		
-		if(external_sd.exists()) {
+		if(external_sd.exists() && external_sd.list().length>0) {
 			pathToSDCard = external_sd;
-		}else if (extSdCard.exists()){
+		}else if (extSdCard.exists() && extSdCard.list().length>0){
 			pathToSDCard = extSdCard;
-		}else if (emmc.exists()){
+		}else if (emmc.exists() && emmc.list().length>0){
 			pathToSDCard = emmc;
 		}else{
 			pathToSDCard = Environment.getExternalStorageDirectory();
 		}
 	}
+	
+	
 	
 	public static ArrayList<File> getFoldersOnSDCard() {
 		File[] folder = pathToSDCard.listFiles();
