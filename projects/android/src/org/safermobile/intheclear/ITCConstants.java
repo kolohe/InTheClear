@@ -1,6 +1,7 @@
 package org.safermobile.intheclear;
 
 import android.app.Activity;
+import android.os.Environment;
 import android.provider.CallLog;
 import android.provider.ContactsContract.CommonDataKinds.Email;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
@@ -165,6 +166,7 @@ public class ITCConstants {
 				"sync_events"
 			};
 		}
+		
 	}
 	
 	public static class Duriation {

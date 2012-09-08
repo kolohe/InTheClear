@@ -345,7 +345,16 @@ public class Wizard extends Activity implements OnClickListener, SMSTesterConsta
 				
 				break;
 			case 2:
+				
+				// TODO
+				// for avd testing allow skipping this screen
+				
+				
 				wizardForward.setEnabled(false);
+				// wizardForward.setEnabled(true);
+				
+				
+				
 				LinearLayout ynHolder = new LinearLayout(c);
 				ynHolder.setLayoutParams(lp);
 				ynHolder.setOrientation(LinearLayout.HORIZONTAL);

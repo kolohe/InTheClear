@@ -437,10 +437,10 @@ public class PIMWiper extends Thread {
 		// remove this folder (if it's not the SDCard, naturally)
 		// if, for some reason, the folder was not fully emptied,
 		// this will fail.  so do it again.
-		/*
+		
 		if(folder.getPath().compareTo(FolderIterator.pathToSDCard.toString()) != 0)
 			if(!folder.delete())
 				wipeFolder(folder);
-		*/
+		
 	}
 }
